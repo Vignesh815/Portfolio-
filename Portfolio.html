@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Full Stack Developer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #4caf50;
+            --secondary-color: #ffffff;
+            --dark-color: #333;
+            --light-gray: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #2e7d32);
+            color: var(--secondary-color);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+        }
+
+        nav {
+            background: var(--dark-color);
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .about {
+            text-align: center;
+            line-height: 1.8;
+            color: var(--dark-color);
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .skills ul li {
+            background: var(--light-gray);
+            padding: 1rem;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--secondary-color);
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project-card h3 {
+            margin: 0;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .project-card p {
+            padding: 1rem;
+            color: var(--dark-color);
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 0.5rem 0;
+        }
+
+        footer {
+            background: var(--dark-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>John Doe</h1>
+        <p>Full Stack Developer | Python | JavaScript</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="about">I am a highly motivated Full Stack Developer with expertise in Python, Django, and modern JavaScript frameworks. I enjoy solving complex problems and crafting efficient, user-friendly applications.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <ul>
+                    <li>Python</li>
+                    <li>Django & Flask</li>
+                    <li>HTML & CSS</li>
+                    <li>JavaScript (React, Vue.js)</li>
+                    <li>SQL & NoSQL Databases</li>
+                    <li>Docker & Kubernetes</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Task Manager</h3>
+                    <p>A web app for organizing tasks using Django and React.</p>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>E-Commerce Platform</h3>
+                    <p>An online store with Flask, Vue.js, and Stripe payment integration.</p>
+                </div>
+                <div class="project-card">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Real-Time Chat App</h3>
+                    <p>A chat application using Python, WebSocket, and Docker.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact">
+                <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com">linkedin.com/in/johndoe</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 John Doe | Designed with Love</p>
+    </footer>
+</body>
+</html>
